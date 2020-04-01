@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# dosctring = dokumentační řetězec; uloží se do 
-#kouzelné proměnné __doc__
 """Usage: grep.py PATTERN FILE
 
 Print lines from FILE matching regular expression PATTERN.
 
 """
+
 import sys
 import regex as re
+
 
 def grep(pattern, lines):
     """Print lines matching pattern."""
@@ -16,9 +16,11 @@ def grep(pattern, lines):
         if re.search(pattern, line):
             print(line)
 
+            
 def parse_argv(argv):
     pattern, path =argv[1:]
     return pattern, path
+
 
 def main():
     try: 
